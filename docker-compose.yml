@@ -1,0 +1,16 @@
+version: "3.0"
+
+services:
+  ravis:
+    build:
+      context: .
+    image: gds-service-ravis
+    env_file: docker-compose.env
+    environment:
+      SERVICES: ravis
+    external_links:
+      - redis:redis
+      - mongo:mongo
+      - nats:nats
+      - logstash:logstash
+    network_mode: bridge
