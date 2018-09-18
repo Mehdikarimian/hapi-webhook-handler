@@ -1,19 +1,19 @@
 module.exports = [
   {
-    method: 'GET',
+    method: 'POST',
     path: '/bienteha-service-core',
     config: {
-      handler () {
-
+      handler (request) {
+        console.log(request)
       }
     }
   },
   {
-    method: 'GET',
+    method: 'POST',
     path: '/bienteha-service-ravis',
     config: {
-      handler () {
-
+      handler (request) {
+        console.log(request)
       }
     }
   }
